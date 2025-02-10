@@ -1,0 +1,37 @@
+.carrito-icon {
+  position: fixed;
+  top: 10px; /* Ajusta la distancia desde la parte superior */
+  right: 15px; /* Ajusta la distancia desde la derecha */
+  font-size: 24px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  z-index: 1000; /* Asegura que quede por encima de otros elementos */
+}
+
+.carrito-icon:hover {
+  transform: scale(1.1);
+}
+
+.carrito-icon a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.contador {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 14px;
+  margin-left: 5px;
+}

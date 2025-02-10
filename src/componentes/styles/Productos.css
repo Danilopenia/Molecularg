@@ -1,0 +1,85 @@
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box; /* Asegura que el padding no rompa el layout */
+}
+
+.producto-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .productos-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+  }
+}
+
+@media (max-width: 992px) {
+  .productos-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+  }
+}
+
+@media (max-width: 768px) {
+  .productos-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+  }
+}
+
+@media (max-width: 414px) {
+  .productos-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+    padding: 0 10px; /* Asegura que las tarjetas no toquen los bordes */
+  }
+  .producto-card {
+    width: 100%; /* Las tarjetas usan todo el ancho disponible */
+    padding: 8px; /* Reducir padding */
+  }
+}
+
+@media (max-width: 375px) {
+  .productos-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+    padding: 0 10px; /* Asegura que las tarjetas no toquen los bordes */
+  }
+  .producto-card {
+    width: 100%; /* Las tarjetas usan todo el ancho disponible */
+    padding: 6px; /* Reducir padding */
+  }
+}
+
+@media (max-width: 320px) {
+  .productos-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas siempre */
+    padding: 0 5px; /* Asegura que las tarjetas no toquen los bordes */
+  }
+  .producto-card {
+    width: 100%; /* Las tarjetas usan todo el ancho disponible */
+    padding: 5px; /* Reducir padding */
+  }
+}
+
+
+
+
+  .producto-imagen{
+    max-width: 150px;
+    max-height: 150px;
+    margin-left: 5%;
+  }
+  .h3-home{
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 1.2rem;  /* Ajusta el tamaño de la fuente */
+    font-weight: bold;   /* Hace que el texto se vea más destacado */
+    margin: 10px 0;
+  }
+  

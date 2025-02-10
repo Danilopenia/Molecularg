@@ -1,0 +1,37 @@
+/* src/componentes/ProductoDetalle.css */
+.producto-detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    text-align: center;
+  }
+  
+  .producto-detalle img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .producto-detalle h2 {
+    margin-top: 20px; /* Espacio entre la imagen y el nombre */
+    font-size: 24px;
+  }
+  
+  .icono-plus {
+    font-size: 40px; /* Icono más grande */
+    cursor: pointer;
+    margin-top: 20px; /* Espacio entre el nombre y el icono */
+  }
+  
+  button {
+    margin-top: 20px; /* Espacio entre el icono y el botón */
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  
