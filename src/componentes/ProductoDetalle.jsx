@@ -1,3 +1,4 @@
+/*
 // src/componentes/ProductoDetalle.jsx
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -60,8 +61,9 @@ const ProductoDetalle = () => {
     <div className="producto-detalle">
       <img src={producto.imagen} alt={producto.nombre} />
       <h2>{producto.nombre}</h2>
-      <p>Precio: ${producto.precio}</p> {/* Muestra el precio */}
-      <div className="icono-plus" onClick={() => setTalleSeleccionado(!talleSeleccionado)}>
+      <p>Precio: ${producto.precio}</p> {/* Muestra el precio */ //} 
+       /*
+       <div className="icono-plus" onClick={() => setTalleSeleccionado(!talleSeleccionado)}>
         +
       </div>
       {talleSeleccionado && (
@@ -82,4 +84,4 @@ const ProductoDetalle = () => {
   );
 };
 
-export default ProductoDetalle;
+export default ProductoDetalle; */

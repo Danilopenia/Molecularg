@@ -23,6 +23,7 @@
   padding: 10px 20px;
   border-radius: 0 25px 25px 0;
   transition: left 0.3s ease-in-out;
+  margin-bottom: 30px;
 }
 
 .navbar.open {
