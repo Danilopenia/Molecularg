@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importamos Link para navegación
+import { Link } from 'react-router-dom'; // Usamos Link para navegación
 import './styles/Navbar.css';
 
 const Navbar = () => {
@@ -11,17 +11,19 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Botón para abrir */}
+      {/* Botón para abrir el menú */}
       <button className="menu-icon" onClick={toggleNavbar}>
         ☰
       </button>
 
-      {/* Navbar horizontal */}
+      {/* Navbar */}
       <div className={`navbar ${isOpen ? 'open' : ''}`}>
+        {/* Botón de cerrar el menú */}
         <button className="close-icon" onClick={toggleNavbar}>
           ✖
         </button>
         <ul>
+          {/* Asegúrate de que los enlaces estén dentro del Router */}
           <li><Link to="/" onClick={toggleNavbar}>Home</Link></li>
           <li><Link to="/about" onClick={toggleNavbar}>About</Link></li>
           <li><Link to="/contact" onClick={toggleNavbar}>Contact</Link></li>
@@ -32,6 +34,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-

@@ -1,49 +1,127 @@
+/* Contenedor de productos */
 .productos-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
+  margin-top: 500px;
 }
 
+/* Estilo base de cada producto */
 .producto-card {
   position: relative;
-  width: 200px;
+  width: 200px; /* Ajusta el tamaño de las tarjetas */
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  visibility: visible;
+  margin: 1.8%;
 }
 
+/* Estilo de la imagen del producto */
 .producto-imagen {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1.8s ease-in-out;
 }
 
+/* Efecto de zoom en el producto seleccionado */
 .producto-card.zoom {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 80vw;
   max-width: 300px;
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: translate(-50%, -50%) scale(1.3);
   z-index: 1000;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
 
+/* Detalles del producto */
 .producto-detalles {
   margin-top: 10px;
 }
 
-.ver-mas {
-  display: inline-block;
+/* Botón de cerrar */
+.producto-detalles button {
   margin-top: 10px;
-  color: blue;
-  text-decoration: underline;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border: none;
   cursor: pointer;
 }
 
+/* Estilo para ocultar otros productos cuando un producto tiene zoom */
 .zoom-activo .producto-card:not(.zoom) {
-  display: none;
+  visibility: hidden; /* Usamos visibility en lugar de display: none */
+}
+
+/* Asegura que los productos se muestren de manera similar en pantallas móviles y de escritorio */
+@media (max-width: 768px) {
+  /* Cambia la disposición de los productos para móviles, asegurando que sea como en escritorio */
+  .productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* Ajusta el tamaño de los productos en móvil para que mantengan el mismo estilo */
+  .producto-card {
+    width: 35%; /* Hace que los productos se ajusten mejor en pantallas más pequeñas */
+    max-width: 80px; /* Limita el tamaño máximo de las tarjetas en móviles */
+  }
+
+  /* Mantén el zoom igual en móviles */
+  .producto-card.zoom {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    max-width: 150px;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Detalles del producto en móviles (cuando hay zoom) */
+  .producto-card.zoom .producto-detalles {
+    margin-top: 5px; /* Reducimos el margen superior */
+    padding: 8px; /* Reducimos el padding */
+    text-align: center;
+    font-size: 0.75em; /* Hacemos aún más pequeño el tamaño de la fuente de los detalles */
+  }
+
+  /* Reducir el tamaño de los botones en los detalles cuando hay zoom */
+  .producto-card.zoom .producto-detalles button {
+    font-size: 0.7em; /* Reducimos más el tamaño del texto del botón */
+    padding: 6px 12px; /* Reducimos el tamaño del padding */
+  }
+
+  /* Reducir el tamaño de los textos (como talles y precio) */
+  .producto-card.zoom .producto-detalles p {
+    font-size: 0.75em; /* Reducimos más el tamaño de los párrafos */
+  }
+
+  .h3-home {
+    font-size: 15px;
+  }
+
+  /* Botón de cerrar centrado */
+  .producto-detalles button {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Oculta los productos no seleccionados en vista móvil */
+  .zoom-activo .producto-card:not(.zoom) {
+    visibility: hidden;
+  }
 }
